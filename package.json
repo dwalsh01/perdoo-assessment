@@ -2,7 +2,7 @@
   "name": "perdoo-rick-and-morty",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dwalsh01.github.io/perdoo-assessment/index.html",
+  "homepage": "./",
   "dependencies": {
     "@apollo/client": "^3.5.10",
     "@chakra-ui/icons": "^1.1.7",
