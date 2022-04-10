@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/perdoo-assessment/static/js/main.6a0e3f0f.js",
+    "main.js": "/perdoo-assessment/static/js/main.b41b389e.js",
     "static/js/787.b080d56b.chunk.js": "/perdoo-assessment/static/js/787.b080d56b.chunk.js",
     "index.html": "/perdoo-assessment/index.html",
-    "main.6a0e3f0f.js.map": "/perdoo-assessment/static/js/main.6a0e3f0f.js.map",
+    "main.b41b389e.js.map": "/perdoo-assessment/static/js/main.b41b389e.js.map",
     "787.b080d56b.chunk.js.map": "/perdoo-assessment/static/js/787.b080d56b.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.6a0e3f0f.js"
+    "static/js/main.b41b389e.js"
   ]
 }
