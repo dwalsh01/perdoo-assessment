@@ -21,6 +21,8 @@ const BrowserRoutes: React.FC = () => (
       <Route path=":id" element={<LocationPage />} />
     </Route>
 
+    {/* this is the quick-fix for getting initial application load on Github Pages */}
+    <Route path="/" element={<CharacterView />} />
     <Route path="*" element={<Navigate to="/characters" replace />} />
   </Routes>
 );
