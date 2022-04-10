@@ -1,5 +1,6 @@
-import { Button, Text } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import { NavigateFunction } from "react-router-dom";
+
 import NavigateButton from "../../routes/NavigateButton";
 
 const episodeHeader = (navigate: NavigateFunction) => {

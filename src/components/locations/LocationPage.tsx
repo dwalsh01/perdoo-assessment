@@ -16,10 +16,10 @@ import {
 import { Outlet, useNavigate, useParams } from "react-router-dom";
 
 import GET_LOCATION_BY_ID from "../../graphql/queries/getLocationByID";
-import Loading from "../loading/Loading";
 import ErrorAlert from "../errorAlert/ErrorAlert";
+import Loading from "../loading/Loading";
 
-const LocationPage: React.FC = ({}) => {
+const LocationPage: React.FC = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const { loading, error, data } = useQuery(GET_LOCATION_BY_ID, {

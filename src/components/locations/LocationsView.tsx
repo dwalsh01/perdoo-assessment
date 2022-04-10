@@ -1,19 +1,18 @@
 import { useQuery } from "@apollo/client";
-import Table from "../table/Table";
-
+import { Heading } from "@chakra-ui/react";
 import { useMemo } from "react";
-
-import { Box, Heading, Spinner } from "@chakra-ui/react";
-import ErrorAlert from "../errorAlert/ErrorAlert";
-import locationsHeader from "./LocationsHeader";
-import GET_ALL_LOCATIONS from "../../graphql/queries/getAllLocations";
 import { useNavigate } from "react-router-dom";
+
+import GET_ALL_LOCATIONS from "../../graphql/queries/getAllLocations";
+import ErrorAlert from "../errorAlert/ErrorAlert";
 import Loading from "../loading/Loading";
+import Table from "../table/Table";
+import locationsHeader from "./LocationsHeader";
 
 const LocationsView = () => {
   const { data, loading, error } = useQuery(GET_ALL_LOCATIONS);
   const navigate = useNavigate();
-  const columns = useMemo(() => locationsHeader(navigate), []);
+  const columns = useMemo(() => locationsHeader(navigate), [navigate]);
   if (loading) {
     return <Loading />;
   }

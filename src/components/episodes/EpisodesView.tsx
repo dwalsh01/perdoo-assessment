@@ -1,19 +1,18 @@
-import { useLazyQuery, useQuery } from "@apollo/client";
-import GET_ALL_CHARACTERS from "../../graphql/queries/getAllCharacters";
-import Table from "../table/Table";
-
+import { useQuery } from "@apollo/client";
+import { Heading } from "@chakra-ui/react";
 import { useMemo } from "react";
-import episodeHeader from "./EpisodeHeader";
-import { Box, Heading, Spinner } from "@chakra-ui/react";
-import ErrorAlert from "../errorAlert/ErrorAlert";
-import GET_ALL_EPISODES from "../../graphql/queries/getAllEpisodes";
 import { useNavigate } from "react-router-dom";
+
+import GET_ALL_EPISODES from "../../graphql/queries/getAllEpisodes";
+import ErrorAlert from "../errorAlert/ErrorAlert";
 import Loading from "../loading/Loading";
+import Table from "../table/Table";
+import episodeHeader from "./EpisodeHeader";
 
 const EpisodeView = () => {
   const { data, loading, error } = useQuery(GET_ALL_EPISODES);
   const navigate = useNavigate();
-  const columns = useMemo(() => episodeHeader(navigate), []);
+  const columns = useMemo(() => episodeHeader(navigate), [navigate]);
 
   if (loading) {
     return <Loading />;

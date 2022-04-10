@@ -20,7 +20,7 @@ import GET_EPISODE_BY_ID from "../../graphql/queries/getEpisodesByID";
 import ErrorAlert from "../errorAlert/ErrorAlert";
 import Loading from "../loading/Loading";
 
-const EpisodePage: React.FC = ({}) => {
+const EpisodePage: React.FC = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const { loading, error, data } = useQuery(GET_EPISODE_BY_ID, {

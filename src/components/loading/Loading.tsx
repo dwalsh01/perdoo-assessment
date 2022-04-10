@@ -1,7 +1,7 @@
 import { Box, Spinner } from "@chakra-ui/react";
 import React from "react";
 
-const Loading: React.FC = ({}) => {
+const Loading: React.FC = () => {
   return (
     <Box textAlign="center" mt={10} data-testid="LoadingSpinner">
       <Spinner

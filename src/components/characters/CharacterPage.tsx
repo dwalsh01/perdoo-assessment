@@ -21,7 +21,7 @@ import GET_CHARACTER_BY_ID from "../../graphql/queries/getCharacterByID";
 import ErrorAlert from "../errorAlert/ErrorAlert";
 import Loading from "../loading/Loading";
 
-const CharacterPage: React.FC = ({}) => {
+const CharacterPage: React.FC = () => {
   const navigate = useNavigate();
 
   const { id } = useParams();
