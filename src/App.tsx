@@ -1,11 +1,14 @@
-import React from "react";
-import "./App.css";
-import { Boilerplate } from "./Boilerplate";
+import { Box } from "@chakra-ui/react";
+import BrowserRoutes from "./routes/Routes";
+import Navigation from "./components/navigation/Navbar";
 
 export const App = () => {
   return (
-    <div>
-      <Boilerplate />
-    </div>
+    <Box w="100%" h="100%" textColor="gray.50">
+      <Navigation />
+      <Box px={10}>
+        <BrowserRoutes />
+      </Box>
+    </Box>
   );
 };

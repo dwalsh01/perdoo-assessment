@@ -1,18 +1,22 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
+import { cleanup, render, screen } from "@testing-library/react";
 import { App } from "./App";
 import { MockedProvider, MockedResponse } from "@apollo/client/testing";
+import { BrowserRouter } from "react-router-dom";
+
+afterEach(() => {
+  cleanup();
+});
 
 const mocks: MockedResponse[] = [];
 
-test("renders boilerplate", () => {
+test("renders App Component", () => {
   render(
-    <MockedProvider mocks={mocks} addTypename={false}>
-      <App />
-    </MockedProvider>
+    <BrowserRouter>
+      <MockedProvider mocks={mocks} addTypename={false}>
+        <App />
+      </MockedProvider>
+    </BrowserRouter>
   );
-  const header = screen.getByRole("heading", {
-    name: /full stack web engineer/i,
-  });
-  expect(header).toBeInTheDocument();
+  const title = screen.getByText("Rick & Morty API Explorer");
+  expect(title).toBeInTheDocument();
 });
